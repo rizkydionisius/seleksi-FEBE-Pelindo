@@ -63,8 +63,7 @@ const TabComponent = () => {
                   </label>
                   <input
                     type="text"
-                    value="2021028358FAE20240402000001"
-                    readOnly
+                    placeholder="Masukkan Nomor Pengajuan"
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
                 </div>
@@ -74,8 +73,6 @@ const TabComponent = () => {
                   </label>
                   <input
                     type="date"
-                    value="2024-02-04"
-                    readOnly
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
                 </div>
@@ -85,7 +82,8 @@ const TabComponent = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="Nomor Pendaftaran"
+                    maxLength="20"
+                    placeholder="Masukkan Nomor Pendaftaran"
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
                 </div>
@@ -95,8 +93,6 @@ const TabComponent = () => {
                   </label>
                   <input
                     type="date"
-                    value="2024-02-04"
-                    readOnly
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
                 </div>
@@ -234,7 +230,8 @@ const TabComponent = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="01237556640000"
+                    placeholder="Masukkan No Identitas"
+                    maxLength={16}
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
                 </div>
@@ -247,7 +244,8 @@ const TabComponent = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="01237556640000"
+                    placeholder="Masukkan No Identitas"
+                    maxLength={16}
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
                 </div>
@@ -387,7 +385,15 @@ const TabComponent = () => {
                   <option value="FOB">US Dollar</option>
                 </select>
               </div>
-              
+              <div>
+                <label htmlFor="kurs" className="block text-sm font-medium text-gray-700">Kurs*</label>
+                <input
+                  type="text"
+                  id="kurs"
+                  placeholder="15,000"
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm text-right"
+                />
+              </div>
             </div>
 
             {/* Baris kedua */}
