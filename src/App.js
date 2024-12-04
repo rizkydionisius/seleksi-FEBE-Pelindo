@@ -9,9 +9,10 @@ function App() {
   );
 }
 
+
 const TabComponent = () => {
   const [activeTab, setActiveTab] = useState("data-utama"); 
-
+  
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="text-2xl font-bold text-gray-700 mb-6">Data Pemberitahuan</h1>
@@ -386,49 +387,49 @@ const TabComponent = () => {
                 </select>
               </div>
               <div>
-                <label htmlFor="kurs" className="block text-sm font-medium text-gray-700">Kurs*</label>
-                <input
-                  type="text"
-                  id="kurs"
-                  placeholder="15,000"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm text-right"
-                />
-              </div>
+              <label htmlFor="kurs" className="block text-sm font-medium text-gray-700">Kurs*</label>
+              <input
+                type="text"
+                id="kurs"
+                placeholder="15,000"
+                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm text-right"
+              />
+            </div>
             </div>
 
             {/* Baris kedua */}
             <div className="flex items-center space-x-2">
               <div className="flex flex-col">
                 <label htmlFor="nilai" className="text-sm font-medium text-gray-700">Nilai*</label>
-                <input type="text" id="nilai" placeholder="50,000.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="nilai" placeholder="50000.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div className="flex items-center">
                 <label type="text" className="">+</label>
               </div>
               <div className="flex flex-col">
                 <label htmlFor="biayaTambahan" className="block text-sm font-medium text-gray-700">Biaya Tambahan</label>
-                <input type="text" id="biayaTambahan" placeholder="500.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="biayaTambahan" placeholder="500.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div className="flex items-center">
                 <label htmlFor="tambah" className="font-medium">-</label>
               </div>
               <div className="flex flex-col">
                 <label htmlFor="biayaPengurang" className="block text-sm font-medium text-gray-700">Biaya Pengurang</label>
-                <input type="text" id="biayaPengurang" placeholder="1,000.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="biayaPengurang" placeholder="1000.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div className="flex items-center">
                 <label htmlFor="tambah" className="font-medium">+</label>
               </div>
               <div className="flex flex-col">
                 <label htmlFor="voluntary-declaration" className="block text-sm font-medium text-gray-700">Voluntary Declaration</label>
-                <input type="text" id="voluntary-declaration" placeholder="0" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="voluntary-declaration" placeholder="0" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div className="flex items-center">
                 <label htmlFor="tambah" className="font-medium">=</label>
               </div>
               <div className="flex flex-col">
                 <label htmlFor="nilai-FOB" className="block text-sm font-medium text-gray-700">Nilai FOB</label>
-                <input type="text" id="nilai-FOB" placeholder="0" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="nilai-FOB" placeholder="0" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
             </div>
 
@@ -436,19 +437,12 @@ const TabComponent = () => {
             {/* Baris ketiga */}
             <div className="grid grid-cols-3 gap-6">
               <div>
-                <label htmlFor="asuransi-bayar" className="block text-sm font-medium text-gray-700">Asuransi Bayar di*</label>
-                <select id="asuransi-bayar" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm">
-                  <option value="FOB">Luar Negeri</option>
-                  
-                </select>
-              </div>
-              <div>
                 <label htmlFor="asuransi" className="block text-sm font-medium text-gray-700">Asuransi</label>
-                <input type="text" id="asuransi" placeholder="5,000.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="asuransi" placeholder="5000.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div>
                 <label htmlFor="freight" className="block text-sm font-medium text-gray-700">Freight</label>
-                <input type="text" id="freight" placeholder="400.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="freight" placeholder="400.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
             </div>
 
@@ -456,29 +450,27 @@ const TabComponent = () => {
             <div className="grid grid-cols-5 gap-6">
               <div>
                 <label htmlFor="cif" className="block text-sm font-medium text-gray-700">CIF</label>
-                <input type="text" id="cif" placeholder="59,900.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="cif" placeholder="59,900.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div>
                 <label htmlFor="cifRp" className="block text-sm font-medium text-gray-700">CIF Rp</label>
-                <input type="text" id="cifRp" placeholder="1,056,860,982" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="cifRp" placeholder="1,056,860,982" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div>
                 <label htmlFor="bruto" className="block text-sm font-medium text-gray-700">Bruto</label>
-                <input type="text" id="bruto" placeholder="900.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="bruto" placeholder="900.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div>
                 <label htmlFor="netto" className="block text-sm font-medium text-gray-700">Netto</label>
-                <input type="text" id="netto" placeholder="800.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
+                <input type="number" id="netto" placeholder="800.00" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm" />
               </div>
               <div>
                 <label htmlFor="flag-kontainer" className="block text-sm font-medium text-gray-700">Flag Kontainer*</label>
                 <select id="asuransi-bayar" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm sm:text-sm">
                   <option value="FOB">Cargo Curah</option>
-                  
                 </select>
               </div>
             </div>
-
             {/* Baris kelima */}
             <div className="grid grid-cols-2 gap-6">
               
